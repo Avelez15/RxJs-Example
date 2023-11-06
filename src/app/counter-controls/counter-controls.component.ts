@@ -4,6 +4,7 @@ import {
   decrement,
   increment,
   multiply,
+  reset,
 } from '../counter-store/counter.actions';
 
 @Component({
@@ -24,5 +25,8 @@ export class CounterControlsComponent {
 
   multiply() {
     this.store.dispatch(multiply({ value: 5 }));
+  }
+  reset() {
+    this.store.dispatch(reset());
   }
 }

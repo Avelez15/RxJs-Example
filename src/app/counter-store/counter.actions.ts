@@ -14,3 +14,5 @@ export const multiply = createAction(
   '[Counter] Multply',
   props<{ value: number }>()
 );
+
+export const reset = createAction('[Counter] Reset');
