@@ -15,4 +15,8 @@ export const multiply = createAction(
   props<{ value: number }>()
 );
 
+export const init = createAction('[Counter] Init');
+
+export const set = createAction('[Counter] Set', props<{ value: number }>());
+
 export const reset = createAction('[Counter] Reset');

@@ -7,6 +7,7 @@ import { CounterOutputComponent } from './counter-output/counter-output.componen
 import { CounterControlsComponent } from './counter-controls/counter-controls.component';
 import { counterReducer } from './counter-store/counter.reducer';
 import { EffectsModule } from '@ngrx/effects';
+import { CounterEffects } from './counter-store/counter.effects';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { EffectsModule } from '@ngrx/effects';
     StoreModule.forRoot({
       counter: counterReducer,
     }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([CounterEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],
